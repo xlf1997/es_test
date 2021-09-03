@@ -1,0 +1,25 @@
+server:
+  port: 8888
+
+spring:
+  elasticsearch:
+    clustr-name: elasticsearch
+    host: localhost
+    port: 9200
+    connTimeout: 3000
+    socketTimeout: 5000
+    connectionRequestTimeout: 500
+    # username:
+    # password:
+
+  datasource:
+    username: root
+    password: root
+    #?serverTimezone=UTC解决时区的报错
+    url: jdbc:mysql://localhost:3306/es_mysql?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+mybatis:  #mybatyis的配置
+  mapper-locations: classpath:mapper/*.xml #指定mapper的配置文件的路径是mapper文件夹下的所有 xml文件
+#  type-aliases-package: com.es_test.mapper
